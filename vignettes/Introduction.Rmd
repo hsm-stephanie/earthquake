@@ -1,0 +1,76 @@
+---
+title: "Introduction"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(earthquake)
+library(readr)
+library(magrittr)
+library(dplyr)
+library(ggplot2)
+```
+```{r, include=FALSE}
+#import raw data
+data<-read_delim('signif.txt',delim="\t")
+```
+```{r}
+#clean country names
+eq_location_clean("ECUADOR:  RIOBAMBA, QUITO, CUZCO")
+eq_location_clean("TURKEY")
+eq_location_clean("China: Jiangsu: Nanjing")
+```
+```{r}
+#clean earthquake data
+data1<-eq_clean_data(data)
+str(data1)
+```
+```{r }
+#load cleaned example data of 3 countries
+data(eqdata)
+str(eqdata)
+```
+```{r}
+#timeline plot of INDONEISA
+eqdata %>%
+  filter(COUNTRY=="INDONESIA") %>%
+  ggplot(aes(x=DATE,size=EQ_PRIMARY,fill=TOTAL_DEATHS/10000))+geom_timeline()+mytheme+labs(fill="# deaths",size="Richter scale")                                                                          
+```
+
+```{r}
+#timeline plot of multiple countries
+eqdata %>%
+  ggplot(aes(x=DATE,y=COUNTRY,size=EQ_PRIMARY,fill=TOTAL_DEATHS/10000))+geom_timeline()+mytheme+labs(fill="# deaths",size="Richter scale")                                                                          
+```
+```{r}
+#timepline plot with location name of earthquakes
+eqdata %>%
+  filter(COUNTRY=="USA") %>%
+  ggplot(aes(x=DATE,size=EQ_PRIMARY,fill=TOTAL_DEATHS/10000))+geom_timeline()+mytheme+labs(fill="# deaths",size="Richter scale")+geom_timeline_label(aes(label=LOCATION_NAME,n_max=8))                          
+```
+```{r}
+#interactive map annotated with date of earthquake
+eqdata %>%
+    filter(COUNTRY=="JAPAN") %>%
+      eq_map(annot_col = "DATE")
+
+```
+```{r}
+#interactive map annotated with date of earthquake
+eqdata %>%
+    filter(COUNTRY=="INDONESIA") %>%
+      eq_create_label() %>%
+      eq_map(annot_col = "popup_text")
+
+```
