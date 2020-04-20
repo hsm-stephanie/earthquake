@@ -1,9 +1,6 @@
-library(ggplot2)
 
 test_that("geom_timeline",{
-  data<-data.frame(MONTH=c(1,1,1),
-                   DAY=c(1,1,1),
-                   YEAR=c(1999,2000,2001),
+  data<-data.frame(DATE=as.Date(c("1999-01-01","2000-01-01","2001-01-01")),
                    EQ_PRIMARY=c("6","4","2"),
                    TOTAL_DEATHS=c("500","50","1"),
                    DEATHS=c("500","50","1"),
@@ -11,9 +8,11 @@ test_that("geom_timeline",{
                    LONGITUDE=c("98.1","99.5","100.1"),
                    LOCATION_NAME=c("J-1","J-2","J-3"),
                    COUNTRY=c("J","J","J"))
+  data$EQ_PRIMARY<-as.numeric(data$EQ_PRIMARY)
+  p<-ggplot(data,aes(x=DATE,y=COUNTRY,size=EQ_PRIMARY,fill=TOTAL_DEATHS))+geom_timeline()
 
-  p<-ggplot(data2,aes(x=DATE,y=COUNTRY,size=EQ_PRIMARY,fill=TOTAL_DEATHS))+geom_timeline()
-
-  expect_identical(,
-                   )
+  expect_true(is.ggplot(p))
+  expect_identical(p$layers[[1]]$geom$required_aes,"x")
+  expect_identical(p$labels$y,"COUNTRY")
+  expect_error(print(p), NA)
 })
