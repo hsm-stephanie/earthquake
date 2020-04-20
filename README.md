@@ -11,8 +11,8 @@
 <br>&emsp;eq_map(): build an interactive map.
 <br>&emsp;eq_create_label(): generate labels for the map.</p>
 <p><b>Example: timeline plot</b></p>
-<img src="img1.png" alt="timeline plot1" style="width:500px;height:250px;"/>
-<img src="img2.png" alt="timeline plot2" style="width:500px;height:250px;"/>
+<img src="img/img1.png" alt="timeline plot1" style="width:500px;height:300px;"/>
+<img src="img/img2.png" alt="timeline plot2" style="width:500px;height:300px;"/>
 <p><b>Example: annotated interactive map</b></p>
-<img src="img3.png" alt="map" style="width:500px;height:300px;"/>
+<img src="img/img3.png" alt="map" style="width:500px;height:300px;"/>
 
