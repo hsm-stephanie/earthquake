@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = structure("YOUR-ORCID-ID", .Names = "ORCID"))
-Imports: dplyr,ggplot2,leaflet,lubridate,magrittr,purrr,stringr,readr
+Imports: dplyr,ggplot2,leaflet,lubridate,magrittr,purrr,stringr
 Description: Clean and Visualize NOAA Earthquake Data of Countries.
   Creates timeline plot and interactive map with annotations.
 Dependencies: R (>=2.10)
