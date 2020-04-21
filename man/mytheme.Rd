@@ -3,10 +3,7 @@
 \docType{data}
 \name{mytheme}
 \alias{mytheme}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \format{An object of class \code{theme} (inherits from \code{gg}) of length 60.}
 \usage{
 mytheme

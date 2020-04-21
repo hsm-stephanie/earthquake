@@ -1,7 +1,5 @@
-#' ############# earthquake package ##############
-#' This is a package that contains functions to clean and
-#' visualize NOAA earthquake data of countries
-#' ###############################################
+#' earthquake package
+#'
 #' eqdata
 #'
 #' this data contains earthquake data of Indonesia, Japan,

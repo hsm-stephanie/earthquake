@@ -2,15 +2,12 @@
 % Please edit documentation in R/eq_location_clean.R
 \name{eq_location_clean}
 \alias{eq_location_clean}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and 
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \usage{
 eq_location_clean(x)
 }
 \arguments{
-\item{x}{a string to be cleaned, with country name 
+\item{x}{a string to be cleaned, with country name
 and location name separated by colon (:).}
 }
 \value{
@@ -22,8 +19,8 @@ contains country name, then country name will be returned
 }
 \details{
 This function is used to clean LOCATION_NAME variable by
-stripping out country names and keep the location name, 
-which will be used in plots. The location name will be 
+stripping out country names and keep the location name,
+which will be used in plots. The location name will be
 convert to title case.
 }
 \examples{

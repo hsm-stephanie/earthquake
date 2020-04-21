@@ -2,10 +2,7 @@
 % Please edit documentation in R/eq_create_label.R
 \name{eq_create_label}
 \alias{eq_create_label}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \usage{
 eq_create_label(data)
 }

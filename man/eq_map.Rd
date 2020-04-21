@@ -2,10 +2,7 @@
 % Please edit documentation in R/eq_map.R
 \name{eq_map}
 \alias{eq_map}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \usage{
 eq_map(data, annot_col)
 }

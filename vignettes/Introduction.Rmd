@@ -5,12 +5,11 @@ vignette: >
   %\VignetteIndexEntry{Introduction}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-
-earthquake package for NOAA data
-This package has the following usage:
+--- 
+This package has the following usage
   Clean and Visualize NOAA Earthquake Data of Countries.
-  Create timeline plot and interactive map with  annotations.
----  
+  Create timeline plot and interactive map with annotations.
+ 
 
 ```{r, include = FALSE, echo=FALSE}
 knitr::opts_chunk$set(
