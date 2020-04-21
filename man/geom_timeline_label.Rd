@@ -23,18 +23,30 @@ GeomTimelineLabel
 \arguments{
 \item{mapping}{Set of asthetic mappings created by [aes()]}
 
-\item{x}{required, specifies date variable to plot on x axis}
+\item{data}{data frame}
 
-\item{label}{required, specifies label variable to label on y axis}
+\item{stat}{stat function=identity}
 
-\item{n_max}{optional, specifies the number of earthequakes of greatest
-magnitude by countries to label}
+\item{position}{position=identity}
+
+\item{na.rm}{remove NA=F}
+
+\item{show.legend}{show legend=NA}
+
+\item{inherit.aes}{inherit ase=TRUE}
+
+\item{...}{Other arguments passed on to [layer()].}
 }
 \description{
 5.Label the timeline plot with \code{geom_timeline_label} function
 }
 \details{
 This function labels the timeline plot
+
+asthetics: x is required, specifies date variable to plot on x axis;
+label is required, specifies label variable to label on y axis;
+n_max is optional, specifies the number of earthequakes of greatest
+magnitude by countries to label.
 }
 \examples{
 \dontrun{

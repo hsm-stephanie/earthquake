@@ -4,10 +4,18 @@
 #'
 #' This function labels the timeline plot
 #' @param mapping  Set of asthetic mappings created by [aes()]
-#' @param x required, specifies date variable to plot on x axis
-#' @param label required, specifies label variable to label on y axis
-#' @param n_max optional, specifies the number of earthequakes of greatest
-#'              magnitude by countries to label
+#' @param data data frame
+#' @param stat stat function=identity
+#' @param position position=identity
+#' @param na.rm remove NA=F
+#' @param show.legend show legend=NA
+#' @param inherit.aes inherit ase=TRUE
+#' @param ... Other arguments passed on to [layer()].
+#'
+#' @details asthetics: x is required, specifies date variable to plot on x axis;
+#' label is required, specifies label variable to label on y axis;
+#' n_max is optional, specifies the number of earthequakes of greatest
+#' magnitude by countries to label.
 #'
 #' @importFrom grid grid.text
 #' @importFrom grid grid.segments
@@ -34,6 +42,7 @@ geom_timeline_label<-function(mapping=NULL,data=NULL,stat="identity",position="i
   )
 }
 #' @rdname geom_timeline_label
+#' @export
 GeomTimelineLabel<-ggproto("GeomTimelineLabel",Geom,
                            required_aes=c("x","label"),
                            default_aes = aes(y=0.3, n_max=NA,

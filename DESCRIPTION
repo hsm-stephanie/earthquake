@@ -10,7 +10,7 @@ Authors@R:
 Imports: dplyr,ggplot2,leaflet,lubridate,magrittr,purrr,stringr,readr
 Description: Clean and Visualize NOAA Earthquake Data of Countries.
   Creates timeline plot and interactive map with annotations.
-Dependencies: R (>=2.10)
+Depends: R (>= 2.10)
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

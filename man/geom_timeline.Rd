@@ -23,14 +23,19 @@ GeomTimeline
 \arguments{
 \item{mapping}{Set of asthetic mappings created by [aes()]}
 
-\item{x}{required, specifies date variable to plot on x axis}
+\item{data}{data frame}
 
-\item{y}{optional, specifies country variable to plot on y axis}
+\item{stat}{stat function=identity}
 
-\item{size}{optional, specifies size of the point (pch shape=21),
-i.e. magnitude of earthquake}
+\item{position}{position=identity}
 
-\item{fill}{optional, specifies fill of the point, i.e. deaths}
+\item{na.rm}{remove NA=F}
+
+\item{show.legend}{show legend=NA}
+
+\item{inherit.aes}{inherit ase=TRUE}
+
+\item{...}{Other arguments passed on to [layer()].}
 }
 \description{
 3.Timeline plot with \code{geom_timeline} function
@@ -38,6 +43,12 @@ i.e. magnitude of earthquake}
 \details{
 This new geom function is used to build a timeline plot
 of earthquakes.
+
+asthetics: x is required, specifies date variable to plot on x axis;
+y is optional, specifies country variable to plot on y axis;
+size is optional, specifies size of the point (pch shape=21),
+i.e. magnitude of earthquake;
+fill is optional, specifies fill of the point, i.e. deaths.
 }
 \examples{
 \dontrun{

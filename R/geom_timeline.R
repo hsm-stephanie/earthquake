@@ -6,11 +6,19 @@
 #' of earthquakes.
 #'
 #' @param mapping  Set of asthetic mappings created by [aes()]
-#' @param x required, specifies date variable to plot on x axis
-#' @param y optional, specifies country variable to plot on y axis
-#' @param size optional, specifies size of the point (pch shape=21),
-#'             i.e. magnitude of earthquake
-#' @param fill optional, specifies fill of the point, i.e. deaths
+#' @param data data frame
+#' @param stat stat function=identity
+#' @param position position=identity
+#' @param na.rm remove NA=F
+#' @param show.legend show legend=NA
+#' @param inherit.aes inherit ase=TRUE
+#' @param ... Other arguments passed on to [layer()].
+#'
+#' @details asthetics: x is required, specifies date variable to plot on x axis;
+#' y is optional, specifies country variable to plot on y axis;
+#' size is optional, specifies size of the point (pch shape=21),
+#' i.e. magnitude of earthquake;
+#' fill is optional, specifies fill of the point, i.e. deaths.
 #'
 #' @importFrom grid grid.points
 #' @importFrom grid grid.segments
@@ -34,6 +42,7 @@ geom_timeline<-function(mapping=NULL,data=NULL,stat="identity",position="identit
   )
 }
 #' @rdname geom_timeline
+#' @export
 GeomTimeline<-ggproto("GeomTimeline",Geom,
                       required_aes=c("x"),
                       default_aes = aes(y=0.3, size = 1, fill = "grey25",
