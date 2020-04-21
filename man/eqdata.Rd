@@ -19,11 +19,7 @@ eqdata}
  \item{TOTAL_DEATHS}{Number of total deaths caused directly or
  indirectly by earthquake, i.e.tsunami}
  \item{EQ_PRIMARY}{Magnitude of earthquake}
-}
- @examples
- \dontrun{
- eqdata
- }}
+}}
 \source{
 NOAA The Significant Earthquake Database
  \url{https://www.ngdc.noaa.gov/nndc/struts/form?t=101650&s=1&d=1}

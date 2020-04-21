@@ -22,12 +22,6 @@
 #'  indirectly by earthquake, i.e.tsunami}
 #'  \item{EQ_PRIMARY}{Magnitude of earthquake}
 #' }
-#'  @examples
-#'  \dontrun{
-#'  eqdata
-#'  }
+#'
 "eqdata"
-#'
-#'
-#'
-#'
+
