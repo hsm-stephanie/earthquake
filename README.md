@@ -1,5 +1,9 @@
 # earthquake
+<p>
+<a href="https://travis-ci.com/github/hsm-stephanie/earthquake">
 <img src="https://travis-ci.com/hsm-stephanie/earthquake.svg?branch=master" />
+</a>
+</p>
 <h1><b>A package for NOAA data</b></h1>
 <p><b>This package has the following usage</b>:
 <br>&emsp;Clean and Visualize NOAA Earthquake Data of Countries.
