@@ -3,11 +3,7 @@
 \docType{data}
 \name{eqdata}
 \alias{eqdata}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and
-visualize NOAA earthquake data of countries
-###############################################
-eqdata}
+\title{earthquake package}
 \format{a data frame with 8 variables:
 \describe{
  \item{DATE}{Date values between 2000-01-01 to 2020-01-01}
@@ -28,6 +24,9 @@ NOAA The Significant Earthquake Database
 eqdata
 }
 \description{
+eqdata
+}
+\details{
 this data contains earthquake data of Indonesia, Japan,
 and USA from 2000-01-01 to 2020-01-01
 }

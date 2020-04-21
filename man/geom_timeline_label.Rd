@@ -4,10 +4,7 @@
 \name{geom_timeline_label}
 \alias{geom_timeline_label}
 \alias{GeomTimelineLabel}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \format{An object of class \code{GeomTimelineLabel} (inherits from \code{Geom}, \code{ggproto}, \code{gg}) of length 5.}
 \usage{
 geom_timeline_label(

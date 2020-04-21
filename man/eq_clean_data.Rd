@@ -2,10 +2,7 @@
 % Please edit documentation in R/eq_clean_data.R
 \name{eq_clean_data}
 \alias{eq_clean_data}
-\title{############# earthquake package ##############
-This is a package that contains functions to clean and 
-visualize NOAA earthquake data of countries
-###############################################}
+\title{earthquake package}
 \usage{
 eq_clean_data(x)
 }
@@ -21,7 +18,7 @@ a cleaned dataframe or tibble
 \details{
 This function is used to clean variables to be used in
 the plots.It will generate a DATE variable of class Date
-based on YEAR, MONTH and DAY in the data set. It will 
+based on YEAR, MONTH and DAY in the data set. It will
 convert LATITUDE, LONGITUDE, EQ_PRIMARY, TOTAL_DEATHS to
 numeric and clean LOCATION_NAME using eq_location_clean().
 }

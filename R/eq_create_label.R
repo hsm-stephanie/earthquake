@@ -1,7 +1,4 @@
-#' ############# earthquake package ##############
-#' This is a package that contains functions to clean and
-#' visualize NOAA earthquake data of countries
-#' ###############################################
+#' earthquake package
 #'
 #' 7.Create label of earthquakes for annotation
 #'
